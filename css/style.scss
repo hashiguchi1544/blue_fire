@@ -1,0 +1,241 @@
+$bg-gray: #f7f7f7;
+$bg-footer: #444;
+
+%section-padding {
+  padding: 100px 20%;
+
+  @media (max-width: 1280px) {
+    padding: 80px 10%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 5%;
+  }
+}
+
+html,
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+a{
+  cursor: pointer;
+}
+
+.fd-in {
+    opacity: 0;
+    transform: translate(0, 60px);
+    -webkit-transform: translate(0, 60px);
+  }
+  
+  .fd-done {
+    opacity: 1.0;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+  }
+  
+  section {
+    overflow: hidden;
+    transition: .8s;
+  }
+
+
+  .test{
+      @extend %section-padding;
+  }
+
+header{
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background-color: #ffffff;
+  .header_wrap{
+    width: 80%;
+    margin: 0 10%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 768px){
+      margin: 0;
+      width: 100%;
+    }
+    h1{
+      width: 30%;
+      line-height: 2.5;
+      color: #007bff;
+      :hover{
+        color:#007bff;
+        text-decoration: none;
+      }
+      @media (max-width: 768px){
+        display: block;
+        line-height: 2.5;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    ul{
+      width: 70%;
+      list-style: none;
+      display:flex;
+      justify-content: flex-end;
+      font-size: 18px;
+      margin-top: 15px;
+      @media (max-width: 1280px){
+        font-size: 14px;
+      }
+      @media (max-width: 768px){
+        display:none;
+      }
+      li{
+        width: 130px;
+        text-align: center;
+        padding: 0 10px;
+        @media (max-width: 1280px){
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+        }
+        a{
+          padding: 20px;
+          display:inline-block;
+          text-decoration: none;
+          color: #000077;
+          transition: .5s;
+          @media (max-width: 1280px){
+            padding: 10px;
+          }
+        }
+        a:hover{
+          font-weight: 600;
+          font-size: 110%;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}
+
+.top{
+  margin-top: 80px;
+  padding: 100px 0;
+  text-align: center;
+  z-index: 0;
+  @media(max-width: 768px){
+    padding: 40px 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2{
+    padding: 20px 0;
+    font-size: 20px;
+    color: #6e6d6d;
+    @media(max-width: 768px){
+      padding: 0;
+    }
+  }
+}
+
+.section{
+  &__title{
+    font-size: 30px;
+    text-align: center;
+    &--description{
+      text-align: center;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.about{
+  @extend %section-padding;
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    &--image{
+      width: 50%;
+      @media(max-width: 768px){
+        width: 100%;
+        margin: 0 10%;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    &--text{
+      width: 50%;
+      @media(max-width: 768px){
+        width: 100%;
+      }
+      P{
+        font-size: 18px;
+        line-height: 2;
+        margin-left: 50px;
+        text-align: justify;
+        @media(max-width: 768px){
+          margin: 20px 10% 0;
+        }
+      }
+    }
+  }
+}
+
+.gallery{
+  @extend %section-padding;
+  &__list{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    &--item{
+      width: calc(25% - 12px);
+      &:nth-child(n+5){
+        margin-top: 20px;
+      }
+      &:not(:nth-child(1)):not(:nth-child(5)){
+        margin-left: 16px;
+      }
+      img{
+        width: 100%;
+      }
+      a{
+        transition: .5s;
+        &:hover{
+          opacity: .7;
+          img{
+            box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+          }
+        }
+      }
+    }
+  }
+}
+
+.map{
+  @extend %section-padding;
+  &__container{
+    text-align: center;
+  }
+}
+
+.way {
+  @extend %section-padding;
+  ul{
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.mail{
+  @extend %section-padding;
+}
+
+footer{
+  text-align: center;
+}
