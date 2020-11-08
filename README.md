@@ -1,17 +1,22 @@
 # リポジトリ名
 https://github.com/hashiguchi1544/blue_fire
-## 目的
-HTML, CSS, JavaScript の学習のため
+
+## Webサイト名
+Blue Fire
+
+## どのようなWebサイトか
+東南アジアの火山に旅行記のWebサイト。
 
 ## URL
 https://yasuh-blog.com/app/blue_fire/
 
-## 作成したサイト
-東南アジアの火山に旅行記のWebサイト。
+## 作成したサイトについて
 
 画像は実際のもの、地図は実在地を示している。
 
 フォームの送信機能は実装せず。
+
+説明文は一部サンプルテキストを挿入している。
 
 ## ディレクトリ
 ```bash
